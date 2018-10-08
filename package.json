@@ -1,0 +1,29 @@
+{
+  "name": "Setter",
+  "version": "0.0.1",
+  "description": "adding two numbers",
+  "cordova": {
+    "id": "anuj.setter",
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anujsinghwd/rest-test.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "anuj singh",
+  "license": "BSD-3-Clause",
+  "dependencies": {}
+}

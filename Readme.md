@@ -2,7 +2,7 @@
 
 [![N|Solid](https://www.mapmyindia.com/api/img/mapmyindia-api.png)](https://www.mapmyindia.com/api/)
 
-For full documentation contact MapmyIndia here: 
+For full documentation contact MapmyIndia here:
 [MapmyIndia: apisupport@mapmyindia.co.in](mailto:apisupport@mapmyindia.co.in).
 You can get your api key to be used in this document here: [https://www.mapmyindia.com/api/signup](https://www.mapmyindia.com/api/signup)
 
@@ -35,7 +35,7 @@ $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-io
 ```
 
 > Inside `window.plugins.mmi_rest` function if you want	to access this property	you have to assign to a	variable like
-> `var	thisObj	= this` outside	the `window.plugins.mmi_rest` function	body if you are	working	with `IONIC V > 1`	
+> `var	thisObj	= this` outside	the `window.plugins.mmi_rest` function	body if you are	working	with `IONIC V > 1`
 
 ### Check if it’s	Installed	or	not
 
@@ -43,7 +43,7 @@ $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-io
 if(window.plugins)
 {
     console.log('working YAY!');
-}	
+}
 else
 {
     console.log('Not Working!');
@@ -52,7 +52,7 @@ else
 ## API	Usage
 
 
-### Features: 
+### Features:
 
  1. Autosuggest
  2. Geocoding
@@ -79,10 +79,10 @@ else
 window.plugins.mmi_rest
 		.atlas_auto(
 			{
-			  client_id: 'clientId',	
-			  client_secret:	'clientSecret',	
+			  client_id: 'clientId',
+			  client_secret:	'clientSecret',
 			  query: 'agr'
-			 },	
+			 },
 SuccessCallback, Error Callback);
 ```
 ##### Example
@@ -92,7 +92,7 @@ window.plugins.mmi_rest.atlas_auto({client_id: 'clientId',	client_secret:	'clien
 function(result)
 {
 	console.log(result);
-},	
+},
 function(error)
 {
 	console.log(error);
@@ -119,7 +119,7 @@ function(error)
 window.plugins.mmi_rest.geocode({key: 'YOUR	API	KEY',	addr: 'lucknow'},
 function(result){
 	console.log(JSON.stringify(result));
-		},	
+		},
 function(err){
 	console.log(err);
 		}
@@ -150,7 +150,7 @@ window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId',	client_secret: 'cli
 function(result)
 {
 	console.log(JSON.stringify(result));
-},	
+},
 function(error)
 {
 	console.log(error);
@@ -178,7 +178,7 @@ window.plugins.mmi_rest.rev_geocode(key: 'YOUR	API	KEY', lat: '27.61234', lng:	'
 window.plugins.mmi_rest.rev_geocode({key: 'YOUR	API	KEY', lat: '27.61234', lng: '77.61234'},
 function(result){
 	console.log(JSON.stringify(result));
-},	
+},
 function(err){
 	console.log(err);
 });
@@ -203,7 +203,7 @@ window.plugins.mmi_rest.place_detail({key: 'YOUR API KEY', placeId: 'MMI000'},
 function(result)
 {
 	console.log(JSON.stringify(result));
-},	
+},
 function(err)
 {
 	console.log(err);
@@ -233,7 +233,7 @@ window.plugins.mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77
 function(result)
 {
 	console.log(JSON.stringify(result));
-}, 
+},
 function(err)
 {
 	console.log(err);
@@ -263,7 +263,7 @@ window.plugins.mmi_rest.route({key:	'YOUR API KEY',	start: '28.111,77.111',	dest
 function(result)
 {
 	console.log(JSON.stringify(result));
-},	
+},
 function(err)
 {
 	console.log(JSON.stringify(err));
@@ -277,9 +277,9 @@ function(err)
 window.plugins.mmi_rest.get(url, Success Callback, Error Callback);
 ```
 
-For any queries and support, please contact: 
+For any queries and support, please contact:
 
-![Email](https://www.google.com/a/cpanel/mapmyindia.co.in/images/logo.gif?service=google_gsuite) 
+![Email](https://www.google.com/a/cpanel/mapmyindia.co.in/images/logo.gif?service=google_gsuite)
 Email us at [apisupport@mapmyindia.co.in](mailto:apisupport@mapmyindia.co.in)
 
 ![](https://www.mapmyindia.com/api/img/icons/stack-overflow.png)
