@@ -66,12 +66,12 @@ else
 
 ##### Parameters
 
-- key
-- client_id
-- client_secret
-- query
-- successCallback
-- errorCallback
+- `key*`
+- `client_id*`
+- `client_secret*`
+- `query*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -96,10 +96,10 @@ function(error)
 #### Geocode
 
 ##### Parameters
-- key*
-- addr*
-- successCallback*
-- errorCallback*
+- `key*`
+- `addr*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -123,13 +123,13 @@ function(err){
 
 ##### Parameters
 
-- key
-- client_id
-- client_secret
-- keywords
-- refLocation
-- successCallback
-- errorCallback
+- `key*`
+- `client_id*`
+- `client_secret*`
+- `keywords*`
+- `refLocation*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -154,11 +154,11 @@ function(error)
 
 ##### Parameters
 
-- key*
-- lat*
-- lng*
-- successCallback*
-- errorCallback*
+- `key*`
+- `lat*`
+- `lng*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -171,20 +171,19 @@ window.plugins.mmi_rest.rev_geocode(key: 'YOUR	API	KEY', lat: '27.61234', lng:	'
 window.plugins.mmi_rest.rev_geocode({key: 'YOUR	API	KEY', lat: '27.61234', lng: '77.61234'},
 function(result){
 	console.log(JSON.stringify(result));
-			},	
+},	
 function(err){
 	console.log(err);
-			}
-);
+});
 ```
 #### Place Details / eLoc
 
 ##### Parameters
 
-- key*
-- placeId*
-- successCallback*
-- errorCallback*
+- `key*`
+- `placeId*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -208,12 +207,12 @@ function(err)
 ##### Parameters
 
 
-- key*
-- lat*
-- lng*
-- points*
-- successCallback*
-- errorCallback*
+- `key*`
+- `lat*`
+- `lng*`
+- `points*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -239,11 +238,11 @@ function(err)
 
 Note: "alternatives" and "advices" are optional	parameters; send	null if they are empty.
 
-- key*
-- start*
-- destination*
-- successCallback*
-- errorCallback*
+- `key*`
+- `start*`
+- `destination*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
