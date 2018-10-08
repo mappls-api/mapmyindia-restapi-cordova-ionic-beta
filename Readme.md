@@ -34,8 +34,8 @@ $ declare var window;	//declare this var globally
 $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
 ```
 
-> Inside	`window.plugins.mmi_rest` function	if	you	want	to	access this property	you	have	to	assign	to	a	variable	like
-> 	`var	thisObj	= this` outside	the `window.plugins.mmi_rest` function	body	if	you are	working	with	`IONIC	V	> 1`	
+> Inside `window.plugins.mmi_rest` function if you want	to access this property	you have to assign to a	variable like
+> `var	thisObj	= this` outside	the `window.plugins.mmi_rest` function	body if you are	working	with `IONIC V > 1`	
 
 ### Check if it’s	Installed	or	not
 
