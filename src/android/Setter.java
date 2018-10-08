@@ -1,4 +1,4 @@
-package mmi.setter;
+package com.mapmyindia.cordova.restapi;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
