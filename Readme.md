@@ -29,10 +29,9 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 > MapmyIndia	Plugin	requires	Cordova to	run.
 > This plugin will work with only **Android** Devices
 
-```
-$	declare	var window;	//declare this var globally
-$	cordova	plugin	add	https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta
-$	.git
+```js
+$ declare var window;	//declare this var globally
+$ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
 ```
 
 > Inside	`window.plugins.mmi_rest` function	if	you	want	to	access this property	you	have	to	assign	to	a	variable	like
@@ -40,14 +39,14 @@ $	.git
 
 ### Check if it’s	Installed	or	not
 
-```js
+```javascript
 if(window.plugins)
 {
-	console.log('working YAY!');
+    console.log('working YAY!');
 }	
 else
 {
-	console.log('Not Working!');
+    console.log('Not Working!');
 }
 ```
 ## API	Usage
@@ -67,17 +66,24 @@ else
 
 ##### Parameters
 
-- key
-- client_id
-- client_secret
-- query
-- successCallback
-- errorCallback
+- `key*`
+- `client_id*`
+- `client_secret*`
+- `query*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.atlas_auto({client_id:	'clientId',	client_secret:	'clientSecret',	query:	'agr'},	Success	Callback,	Error Callback);
+window.plugins.mmi_rest
+		.atlas_auto(
+			{
+			  client_id: 'clientId',	
+			  client_secret:	'clientSecret',	
+			  query: 'agr'
+			 },	
+SuccessCallback, Error Callback);
 ```
 ##### Example
 
@@ -97,10 +103,10 @@ function(error)
 #### Geocode
 
 ##### Parameters
-- key*
-- addr*
-- successCallback*
-- errorCallback*
+- `key*`
+- `addr*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -124,13 +130,13 @@ function(err){
 
 ##### Parameters
 
-- key
-- client_id
-- client_secret
-- keywords
-- refLocation
-- successCallback
-- errorCallback
+- `key*`
+- `client_id*`
+- `client_secret*`
+- `keywords*`
+- `refLocation*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -155,11 +161,11 @@ function(error)
 
 ##### Parameters
 
-- key*
-- lat*
-- lng*
-- successCallback*
-- errorCallback*
+- `key*`
+- `lat*`
+- `lng*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -172,20 +178,19 @@ window.plugins.mmi_rest.rev_geocode(key: 'YOUR	API	KEY', lat: '27.61234', lng:	'
 window.plugins.mmi_rest.rev_geocode({key: 'YOUR	API	KEY', lat: '27.61234', lng: '77.61234'},
 function(result){
 	console.log(JSON.stringify(result));
-			},	
+},	
 function(err){
 	console.log(err);
-			}
-);
+});
 ```
 #### Place Details / eLoc
 
 ##### Parameters
 
-- key*
-- placeId*
-- successCallback*
-- errorCallback*
+- `key*`
+- `placeId*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -209,12 +214,12 @@ function(err)
 ##### Parameters
 
 
-- key*
-- lat*
-- lng*
-- points*
-- successCallback*
-- errorCallback*
+- `key*`
+- `lat*`
+- `lng*`
+- `points*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
@@ -240,11 +245,11 @@ function(err)
 
 Note: "alternatives" and "advices" are optional	parameters; send	null if they are empty.
 
-- key*
-- start*
-- destination*
-- successCallback*
-- errorCallback*
+- `key*`
+- `start*`
+- `destination*`
+- `successCallback*`
+- `errorCallback*`
 
 ##### Syntax
 
