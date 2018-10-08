@@ -76,7 +76,14 @@ else
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.atlas_auto({client_id:	'clientId',	client_secret:	'clientSecret',	query:	'agr'},	Success	Callback,	Error Callback);
+window.plugins.mmi_rest
+		.atlas_auto(
+			{
+			  client_id: 'clientId',	
+			  client_secret:	'clientSecret',	
+			  query: 'agr'
+			 },	
+SuccessCallback, Error Callback);
 ```
 ##### Example
 
