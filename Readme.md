@@ -265,61 +265,6 @@ function(err)
 });
 ```
 
-#### Autosuggest (Legacy - For internal use only)
-
-##### Parameters
-
- - key*
- - query*
- - successCallback*
- - errorCallback*
-
-##### Syntax
-
-```js
-	window.plugins.mmi_rest.auto({key: 'API	KEY', query: 'Search	String'}, successCallback, errorCallback);
-```
-##### Example
-
-```js
-	window.plugins.mmi_rest.auto({key: 'YOUR API KEY', query: 'Search	String', 
-	function(result){
-			console.log('success');
-				},	
-	function(err){
-			console.log('error');
-			}
-);
-```
-#### Nearby (Legacy - For internal use only)
-
-##### Parameters
-
-- key*
-- lat*
-- lng*
-- keywords*
-- successCallback*
-- errorCallback*
-
-##### Syntax
-
-```js
-window.plugins.mmi_rest.nearby_search({key: 'YOUR API KEY', lat: '27.61234', lng:	'77.61234', keywords:'atm'}, Success Callback, Error Callback);
-```
-##### Example
-
-```js
-window.plugins.mmi_rest.nearby_search({key:	'YOUR API KEY', lat: '27.61234', lng: '77.61234', keywords:'finatm'},
-function(result)
-{
-	console.log(JSON.stringify(result));
-}, 
-function(err)
-{
-	console.log(err);
-});
-```
 
 #### How to generate an HTTP GET Request
 
