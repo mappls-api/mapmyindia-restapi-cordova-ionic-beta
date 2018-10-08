@@ -39,14 +39,14 @@ $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-io
 
 ### Check if it’s	Installed	or	not
 
-```js
+```javascript
 if(window.plugins)
 {
-	console.log('working YAY!');
+    console.log('working YAY!');
 }	
 else
 {
-	console.log('Not Working!');
+    console.log('Not Working!');
 }
 ```
 ## API	Usage
