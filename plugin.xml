@@ -2,7 +2,7 @@
 <plugin id="mapmyindia-restapi-cordova-ionic-beta"
         version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
-<name>setter</name>
+<name>mapmyindia-restapi-cordova-ionic-beta</name>
 <js-module name="Setter" src="www/Setter.js">
   <clobbers target="cordova.plugins.Setter" />
 </js-module>
