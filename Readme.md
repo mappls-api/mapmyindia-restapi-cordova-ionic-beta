@@ -14,15 +14,15 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 ## Technologies	Used
 
- 1. Java
- 2. Javascript
- 3. Cordova
+ 1. [Java](https://www.java.com/en/download/)
+ 2. [Javascript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
+ 3. [Cordova](https://cordova.apache.org/)
 
-## Supported	Technologies
+## Supported Technologies
 
- 1. Ionic
- 2. Cordova
- 3. Phonegap
+ 1. [Ionic](https://ionicframework.com/)
+ 2. [Cordova](https://cordova.apache.org/)
+ 3. [Phonegap](https://phonegap.com/)
 
 ## Installation
 
