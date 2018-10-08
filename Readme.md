@@ -31,8 +31,7 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 ```
 $	declare	var window;	//declare this var globally
-$	cordova	plugin	add	https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta
-$	.git
+$	cordova	plugin	add	https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
 ```
 
 > Inside	`window.plugins.mmi_rest` function	if	you	want	to	access this property	you	have	to	assign	to	a	variable	like
