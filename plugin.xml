@@ -1,8 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="mapmyindia-restapi-cordova-ionic-beta"
-        version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        version="0.0.3" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
 <name>mapmyindia-restapi-cordova-ionic-beta</name>
+<description>MapmyIndia REST APIs plugin for Cordova/Ionic</description>
+<author>Anuj Singh</author>
+<license>BSD-3-Clause</license>
+<keywords>Cordova, REST APIs, MapmyIndia, Maps</keywords>
+<repo>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta</repo>
+<issue>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta/issues</issue>
 <js-module name="Setter" src="www/Setter.js">
   <clobbers target="cordova.plugins.Setter" />
 </js-module>

@@ -76,26 +76,24 @@ else
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest
-		.atlas_auto(
-			{
-			  client_id: 'clientId',
-			  client_secret:	'clientSecret',
-			  query: 'agr'
-			 },
-SuccessCallback, Error Callback);
+window.plugins.mmi_rest.atlas_auto(
+    	{
+    	  client_id: 'clientId',
+    	  client_secret:	'clientSecret',
+    	  query: 'agr'
+    	 },SuccessCallback, Error Callback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.atlas_auto({client_id: 'clientId',	client_secret:	'clientSecret',	query:	'agr'},
-function(result)
-{
-	console.log(result);
-},
-function(error)
-{
-	console.log(error);
+window.plugins.mmi_rest.atlas_auto({client_id: 'clientId', client_secret:	'clientSecret',	query: 'agr'},
+    function(result)
+    {
+    	console.log(result);
+    },
+    function(error)
+    {
+    	console.log(error);
 });
 ```
 
@@ -117,13 +115,12 @@ function(error)
 
 ```js
 window.plugins.mmi_rest.geocode({key: 'YOUR	API	KEY',	addr: 'lucknow'},
-function(result){
-	console.log(JSON.stringify(result));
-		},
-function(err){
-	console.log(err);
-		}
-);
+  function(result){
+  	console.log(JSON.stringify(result));
+  },
+  function(err){
+  	console.log(err);
+});
 ```
 
 #### Nearby
@@ -147,14 +144,14 @@ window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId',	client_secret: 'cli
 
 ```js
 window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId',	client_secret: 'clientSecret', keywords: 'beer',	refLocation: '28.631460,77.217423'},
-function(result)
-{
-	console.log(JSON.stringify(result));
-},
-function(error)
-{
-	console.log(error);
-});
+  function(result)
+  {
+  	console.log(JSON.stringify(result));
+  },
+  function(error)
+  {
+  	console.log(error);
+  });
 ```
 
 #### Reverse Geocode

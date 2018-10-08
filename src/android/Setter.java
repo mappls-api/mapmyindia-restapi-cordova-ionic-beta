@@ -172,7 +172,10 @@ public class Setter extends CordovaPlugin {
   if (jsonResponse != null) {
    callbackContext.success(jsonResponse);
   } else {
-   callbackContext.error("Error in HTTP Call..");
+    JSONObject error_res = new JSONObject();
+    error_res.put("status", 400);
+    error_res.put("message", "Error in HTTP Call. please try after sometime");
+    callbackContext.success(error_res);
   }
  }
 
