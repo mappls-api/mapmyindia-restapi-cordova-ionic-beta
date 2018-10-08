@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "adding two numbers",
   "cordova": {
-    "id": "anuj.setter",
+    "id": "mmi.setter",
     "platforms": [
       "android",
       "browser"
