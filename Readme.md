@@ -54,13 +54,13 @@ else
 
 ### Features:
 
- 1. Autosuggest
- 2. Geocoding
- 3. Nearby
- 4. Reverse Geocode
- 5. Place detail
- 6. Distance
- 7. Routing
+ 1. [Autosuggest](#autosuggest)
+ 2. [Geocoding](#geocode)
+ 3. [Nearby](#nearby)
+ 4. [Reverse Geocode](#reverse-geocode)
+ 5. [Place detail](#place-details--eloc)
+ 6. [Distance](#driving-distance-matrix)
+ 7. [Routing](#routing)
 
 #### Autosuggest
 
