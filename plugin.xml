@@ -2,7 +2,7 @@
 <plugin id="mapmyindia-restapi-cordova-ionic-beta"
         version="0.0.7" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
-<name>@mapmyindia/mapmyindia-restapi-cordova-ionic-beta</name>
+<name>mapmyindia-restapi-cordova-ionic-beta</name>
 <description>MapmyIndia REST APIs plugin for Cordova/Ionic</description>
 <author>Anuj Singh</author>
 <license>BSD-3-Clause</license>
