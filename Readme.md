@@ -29,10 +29,6 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 > MapmyIndia Plugin requires Cordova to	run.
 > This plugin will work with only **Android** Devices
 
-- From NPM
-```js
-  $ cordova plugin add @mapmyindia/mapmyindia-restapi-cordova-ionic-beta
-```
 - From Github
 ```js
   $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
