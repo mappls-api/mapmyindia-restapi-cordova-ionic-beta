@@ -10,19 +10,19 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.1 | October 2018 | MapmyIndia API Team (AS) |
+| 0.0.1 | October 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
 
 ## Technologies	Used
 
- 1. Java
- 2. Javascript
- 3. Cordova
+ 1. [Java](https://www.java.com/en/download/)
+ 2. [Javascript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
+ 3. [Cordova](https://cordova.apache.org/)
 
-## Supported	Technologies
+## Supported Technologies
 
- 1. Ionic
- 2. Cordova
- 3. Phonegap
+ 1. [Ionic](https://ionicframework.com/)
+ 2. [Cordova](https://cordova.apache.org/)
+ 3. [Phonegap](https://phonegap.com/)
 
 ## Installation
 
@@ -54,13 +54,13 @@ else
 
 ### Features:
 
- 1. Autosuggest
- 2. Geocoding
- 3. Nearby
- 4. Reverse Geocode
- 5. Place detail
- 6. Distance
- 7. Routing
+ 1. [Autosuggest](#autosuggest)
+ 2. [Geocoding](#geocode)
+ 3. [Nearby](#nearby)
+ 4. [Reverse Geocode](#reverse-geocode)
+ 5. [Place detail](#place-details--eloc)
+ 6. [Distance](#driving-distance-matrix)
+ 7. [Routing](#routing)
 
 #### Autosuggest
 
@@ -76,26 +76,24 @@ else
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest
-		.atlas_auto(
-			{
-			  client_id: 'clientId',
-			  client_secret:	'clientSecret',
-			  query: 'agr'
-			 },
-SuccessCallback, Error Callback);
+window.plugins.mmi_rest.atlas_auto(
+    	{
+    	  client_id: 'clientId',
+    	  client_secret: 'clientSecret',
+    	  query: 'agr'
+    	 },SuccessCallback, Error Callback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.atlas_auto({client_id: 'clientId',	client_secret:	'clientSecret',	query:	'agr'},
-function(result)
-{
-	console.log(result);
-},
-function(error)
-{
-	console.log(error);
+window.plugins.mmi_rest.atlas_auto({client_id: 'clientId', client_secret: 'clientSecret',query: 'agr'},
+    function(result)
+    {
+    	console.log(result);
+    },
+    function(error)
+    {
+    	console.log(error);
 });
 ```
 
@@ -111,19 +109,18 @@ function(error)
 ##### Syntax
 
 ```js
-	window.plugins.mmi_rest.geocode(key: 'YOUR	API KEY', addr:	'address'},	Success Callback, Error Callback);
+	window.plugins.mmi_rest.geocode(key: 'YOUR API KEY', addr: 'address'}, Success Callback, Error Callback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.geocode({key: 'YOUR	API	KEY',	addr: 'lucknow'},
-function(result){
-	console.log(JSON.stringify(result));
-		},
-function(err){
-	console.log(err);
-		}
-);
+window.plugins.mmi_rest.geocode({key: 'YOUR API KEY', addr: 'lucknow'},
+  function(result){
+      console.log(JSON.stringify(result));
+  },
+  function(err){
+     console.log(err);
+});
 ```
 
 #### Nearby
@@ -141,20 +138,20 @@ function(err){
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId',	client_secret: 'clientSecret', keywords: 'beer',	refLocation: '28.631460,77.217423'}, Success	Callback, Error Callback);
+window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId', client_secret: 'clientSecret', keywords: 'beer', refLocation: '28.631460,77.217423'}, SuccessCallback, ErrorCallback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId',	client_secret: 'clientSecret', keywords: 'beer',	refLocation: '28.631460,77.217423'},
-function(result)
-{
-	console.log(JSON.stringify(result));
-},
-function(error)
-{
-	console.log(error);
-});
+window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId',client_secret: 'clientSecret',keywords: 'beer',refLocation: '28.631460,77.217423'},
+  function(result)
+  {
+  	console.log(JSON.stringify(result));
+  },
+  function(error)
+  {
+  	console.log(error);
+  });
 ```
 
 #### Reverse Geocode
@@ -170,17 +167,17 @@ function(error)
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.rev_geocode(key: 'YOUR	API	KEY', lat: '27.61234', lng:	'77.61234'}, Success Callback, Error Callback);
+window.plugins.mmi_rest.rev_geocode(key: 'YOUR API KEY', lat: '27.61234', lng:	'77.61234'}, Success Callback, Error Callback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.rev_geocode({key: 'YOUR	API	KEY', lat: '27.61234', lng: '77.61234'},
+window.plugins.mmi_rest.rev_geocode({key: 'YOUR	API KEY', lat: '27.61234', lng: '77.61234'},
 function(result){
-	console.log(JSON.stringify(result));
+    console.log(JSON.stringify(result));
 },
-function(err){
-	console.log(err);
+function(err){ 
+     console.log(err);
 });
 ```
 #### Place Details / eLoc
@@ -202,11 +199,11 @@ window.plugins.mmi_rest.place_detail({key: 'YOUR API KEY', placeId: 'MMI000'}, S
 window.plugins.mmi_rest.place_detail({key: 'YOUR API KEY', placeId: 'MMI000'},
 function(result)
 {
-	console.log(JSON.stringify(result));
+    console.log(JSON.stringify(result));
 },
 function(err)
 {
-	console.log(err);
+    console.log(err);
 });
 ```
 #### Driving Distance Matrix
@@ -231,19 +228,19 @@ window.plugins.mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77
 ```js
 window.plugins.mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77.61234', points: '29,78|30,78|28,79'},
 function(result)
-{
-	console.log(JSON.stringify(result));
+{ 
+    console.log(JSON.stringify(result));
 },
 function(err)
 {
-	console.log(err);
+    console.log(err);
 });
 ```
 #### Routing
 
 ##### Parameters
 
-Note: "alternatives" and "advices" are optional	parameters; send	null if they are empty.
+Note: "alternatives" and "advices" are optional	parameters; send `null` if they are empty.
 
 - `key*`
 - `start*`
@@ -254,19 +251,19 @@ Note: "alternatives" and "advices" are optional	parameters; send	null if they ar
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.route({key:	'YOUR API KEY', start: '28.111,77.111',	destination: '28.22,77.22', alternatives: null,	advices: null},	Success	Callback,	Error Callback);
+window.plugins.mmi_rest.route({key: 'YOUR API KEY', start: '28.111,77.111', destination: '28.22,77.22', alternatives: null,	advices: null},	SuccessCallback, ErrorCallback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.route({key:	'YOUR API KEY',	start: '28.111,77.111',	destination: '28.22,77.22',	alternatives: null,	advices: null},
+window.plugins.mmi_rest.route({key: 'YOUR API KEY', start: '28.111,77.111', destination: '28.22,77.22',	alternatives: null,	advices: null},
 function(result)
 {
-	console.log(JSON.stringify(result));
+    console.log(JSON.stringify(result));
 },
 function(err)
 {
-	console.log(JSON.stringify(err));
+    console.log(JSON.stringify(err));
 });
 ```
 
