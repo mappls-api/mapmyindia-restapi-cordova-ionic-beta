@@ -1,6 +1,6 @@
 # MapmyIndia REST APIs for Cordova/Ionic - Beta 1
 
-[![N|Solid](https://www.mapmyindia.com/api/img/mapmyindia-api.png)](https://www.mapmyindia.com/api/)
+[![N|Solid](https://www.mapmyindia.com/api/img/mapmyindia-api.png)](https://www.mapmyindia.com/api/) [![npm](npm.svg)](https://www.npmjs.com/package/@mapmyindia/mapmyindia-restapi-cordova-ionic-beta)
 
 For full documentation contact MapmyIndia here:
 [MapmyIndia: apisupport@mapmyindia.co.in](mailto:apisupport@mapmyindia.co.in).
