@@ -1,6 +1,6 @@
 {
-  "name": "mapmyindia-restapi-cordova-ionic-beta",
-  "version": "0.0.3",
+  "name": "@mapmyindia/mapmyindia-restapi-cordova-ionic-beta",
+  "version": "0.0.6",
   "description": "MapmyIndia REST APIs plugin for Cordova/Ionic",
   "repo": "https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta.git",
   "issue": "https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta/issues",
