@@ -26,9 +26,16 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 ## Installation
 
-> MapmyIndia	Plugin	requires	Cordova to	run.
+> MapmyIndia Plugin requires Cordova to	run.
 > This plugin will work with only **Android** Devices
 
+- From NPM
+```js
+  $ declare var window;	//declare this var globally
+  $ cordova plugin add @mapmyindia/mapmyindia-restapi-cordova-ionic-beta
+```
+---
+- From Github
 ```js
 $ declare var window;	//declare this var globally
 $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
@@ -37,7 +44,7 @@ $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-io
 > Inside `window.plugins.mmi_rest` function if you want	to access this property	you have to assign to a	variable like
 > `var	thisObj	= this` outside	the `window.plugins.mmi_rest` function	body if you are	working	with `IONIC V > 1`
 
-### Check if it’s	Installed	or	not
+### Check if it’s Installed or not
 
 ```javascript
 if(window.plugins)
