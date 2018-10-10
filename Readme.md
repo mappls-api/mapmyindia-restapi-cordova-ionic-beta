@@ -10,7 +10,7 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.5 | October 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
+| 0.0.6 | October 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
 
 ## Technologies	Used
 
