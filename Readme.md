@@ -1,4 +1,4 @@
-﻿# MapmyIndia REST APIs for Cordova/Ionic - Beta 1
+# MapmyIndia REST APIs for Cordova/Ionic - Beta 1
 
 [![N|Solid](https://www.mapmyindia.com/api/img/mapmyindia-api.png)](https://www.mapmyindia.com/api/)
 
@@ -10,7 +10,7 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.1 | October 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
+| 0.0.7 | October 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
 
 ## Technologies	Used
 
@@ -26,18 +26,21 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 ## Installation
 
-> MapmyIndia	Plugin	requires	Cordova to	run.
+> MapmyIndia Plugin requires Cordova to	run.
 > This plugin will work with only **Android** Devices
 
+- From Github
 ```js
-$ declare var window;	//declare this var globally
-$ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
+  $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
 ```
-
+- Declare window var globally
+```js
+  $ declare var window;
+```
 > Inside `window.plugins.mmi_rest` function if you want	to access this property	you have to assign to a	variable like
 > `var	thisObj	= this` outside	the `window.plugins.mmi_rest` function	body if you are	working	with `IONIC V > 1`
 
-### Check if it’s	Installed	or	not
+### Check if it’s Installed or not
 
 ```javascript
 if(window.plugins)
@@ -176,7 +179,7 @@ window.plugins.mmi_rest.rev_geocode({key: 'YOUR	API KEY', lat: '27.61234', lng: 
 function(result){
     console.log(JSON.stringify(result));
 },
-function(err){ 
+function(err){
      console.log(err);
 });
 ```
@@ -228,7 +231,7 @@ window.plugins.mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77
 ```js
 window.plugins.mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77.61234', points: '29,78|30,78|28,79'},
 function(result)
-{ 
+{
     console.log(JSON.stringify(result));
 },
 function(err)
