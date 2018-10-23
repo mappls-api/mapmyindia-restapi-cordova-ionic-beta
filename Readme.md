@@ -37,7 +37,7 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 ```js
   $ declare var window;
 ```
-> Inside `window.plugins.mmi_rest` function if you want	to access this property	you have to assign to a	variable like
+> Inside `window.plugins.mmi_rest` function if you want	to access `this` property	you have to assign to a	variable like
 > `var	thisObj	= this` outside	the `window.plugins.mmi_rest` function	body if you are	working	with `IONIC V > 1`
 
 ### Check if it’s Installed or not
