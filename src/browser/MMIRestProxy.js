@@ -83,28 +83,6 @@ function get(success, error, opts) {
     });
 }
 
-
-function get_response(url, access_token, success){
-  var xhttp= new XMLHttpRequest();
-  try{
-    xhttp.onreadystatechange = function(e) {
-      if (xhttp.readyState == 4 && xhttp.status == 0) {
-          alert("Unknown Error Occured. Server response not received.");
-      }else if(xhttp.readyState == 4 && xhttp.status == 200){
-          var rest = JSON.parse(e.target.responseText);
-          success(rest);
-      }
-    };
-    xhttp.open("GET", url, true);
-    xhttp.setRequestHeader("Authorization", "BEARER " + access_token );
-    xhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
-    xhttp.send();
-  }catch(e){
-    console.log('catch', e);
-  }
-}
-
 function get_token(client_id,client_secret, success, error, url){
   var xhttp= new XMLHttpRequest();
   try{
