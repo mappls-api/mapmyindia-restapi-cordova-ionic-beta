@@ -33,11 +33,14 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 ## Installation
 
 ### Browser Installation
-- cordova platform add browser
+```js
+  cordova platform add browser
+```
 
 ### Running in the browser
-- cordova run browser
-
+```js
+  cordova run browser
+```
 
 > MapmyIndia Plugin requires Cordova to	run.
 
