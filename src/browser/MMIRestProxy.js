@@ -22,14 +22,6 @@ function autos(success, error, opts) {
     });
 }
 
-function get(success, error, opts){
-  load(opts[0],function (data) {
-      success(data);
-  }, function (err) {
-      error(err);
-  });
-}
-
 function revGeocode(success, error, opts) {
     var url = API_URL+'/'+opts[0]+'/rev_geocode?lat='+opts[1]+"&lng="+opts[2];
     load(url,function (data) {
@@ -133,6 +125,14 @@ function after() {
     after();error_callback();
   });
   document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+function get(success, error, opts){
+  load(opts[0],function (data) {
+      success(data);
+  }, function (err) {
+      error(err);
+  });
 }
 
 module.exports = {
