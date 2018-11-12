@@ -38,25 +38,13 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 ```js
   $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
 ```
-- Declare window var globally
+- Declare mmi_rest var globally
 ```js
-  $ declare var window;
+  $ declare var mmi_rest;
 ```
 > Inside `mmi_rest` function if you want	to access this property	you have to assign to a	variable like
 > `var	thisObj	= this` outside	the `mmi_rest` function	body if you are	working	with `IONIC V > 1`
 
-### Check if it’s Installed or not
-
-```javascript
-if(window.plugins)
-{
-    console.log('working YAY!');
-}
-else
-{
-    console.log('Not Working!');
-}
-```
 ## API	Usage
 
 
