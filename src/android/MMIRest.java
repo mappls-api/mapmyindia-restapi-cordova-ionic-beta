@@ -19,7 +19,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.net.URLEncoder;
 
-public class Setter extends CordovaPlugin {
+public class MMIRest extends CordovaPlugin {
 
  private final static String BASE_REQ_URL = "https://apis.mapmyindia.com/advancedmaps/v1";
  private final static String ATLAS_REQ_URL = "https://atlas.mapmyindia.com/api/places";
