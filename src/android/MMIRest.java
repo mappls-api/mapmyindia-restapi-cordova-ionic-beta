@@ -268,51 +268,7 @@ public class MMIRest extends CordovaPlugin {
   }
  }
 
- public void atlasAutoSuggest(CallbackContext callbackContext, String clientId, String clientSecret, String query) {
-  if (oauth2_access_token == null || oauth2_token_validity < System.currentTimeMillis() / 1000) {
-   setOAuth2AccessToken("client_credentials", clientId, clientSecret);
-  }
-  String url = "https://atlas.mapmyindia.com/api/places/search/json?";
-  try {
-   String urlParams = "query=" + URLEncoder.encode(query, "UTF-8");
-   String encodedUrl = url + urlParams;
-   HttpURLConnection conn = (HttpURLConnection) new URL(encodedUrl).openConnection();
-   conn.setRequestMethod("GET");
-   conn.setRequestProperty("Authorization", oauth2_token_type + " " + oauth2_access_token);
-   StringBuilder responseStrBuilder = new StringBuilder();
-   String res = "";
-   BufferedReader reader = null;
-   try {
-    InputStream in = new BufferedInputStream(conn.getInputStream());
-    reader = new BufferedReader(new InputStreamReader( in , "UTF-8"));
-    String line = "";
 
-    while ((line = reader.readLine()) != null) {
-     responseStrBuilder.append(line);
-    }
-   } catch (IOException e) {
-    e.printStackTrace();
-    res = "error in inputstream reading";
-   } finally {
-    if (reader != null) {
-     try {
-      reader.close();
-     } catch (IOException e) {
-      e.printStackTrace();
-     }
-    }
-   }
-
-   res = responseStrBuilder.toString();
-   JSONObject response = new JSONObject(res);
-
-   if (response != null) {
-    callbackContext.success(response);
-   }
-  } catch (Exception e) {
-   callbackContext.error("Something Went wrong");
-  }
- }
 
  public void atlasRequest(CallbackContext callbackContext, String clientId, String clientSecret, String encodedUrl) {
   if (oauth2_access_token == null || oauth2_token_validity < System.currentTimeMillis() / 1000) {
@@ -354,52 +310,6 @@ public class MMIRest extends CordovaPlugin {
    }
   } catch (Exception e) {
    callbackContext.error("Something Went wrong");
-  }
- }
-
- public void atlasNearBy(CallbackContext callbackContext, String clientId, String clientSecret, String keywords, String refLocation) {
-  if (oauth2_access_token == null || oauth2_token_validity < System.currentTimeMillis() / 1000) {
-   setOAuth2AccessToken("client_credentials", clientId, clientSecret);
-  }
-  String url = "https://atlas.mapmyindia.com/api/places/nearby/json?";
-  try {
-   String urlParams = "keywords=" + keywords + "&refLocation=" + refLocation;
-   String encodedUrl = url + urlParams;
-   HttpURLConnection conn = (HttpURLConnection) new URL(encodedUrl).openConnection();
-   conn.setRequestMethod("GET");
-   conn.setRequestProperty("Authorization", oauth2_token_type + " " + oauth2_access_token);
-   StringBuilder responseStrBuilder = new StringBuilder();
-   String res = "";
-   BufferedReader reader = null;
-   try {
-    InputStream in = new BufferedInputStream(conn.getInputStream());
-    reader = new BufferedReader(new InputStreamReader( in , "UTF-8"));
-    String line = "";
-
-    while ((line = reader.readLine()) != null) {
-     responseStrBuilder.append(line);
-    }
-   } catch (IOException e) {
-    e.printStackTrace();
-    res = "error in inputstream reading";
-   } finally {
-    if (reader != null) {
-     try {
-      reader.close();
-     } catch (IOException e) {
-      e.printStackTrace();
-     }
-    }
-   }
-
-   res = responseStrBuilder.toString();
-   JSONObject response = new JSONObject(res);
-
-   if (response != null) {
-    callbackContext.success(response);
-   }
-  } catch (Exception e) {
-   callbackContext.error("Something went wrong"+e);
   }
  }
 }
