@@ -1,9 +1,4 @@
 var PLUGIN_NAME = "MMIRest";
-
-var greet = function(params, success, error){
-  cordova.exec(success, error, PLUGIN_NAME, 'greet', [params]);
-};
-
 var auto = function(params, success, error)
 {
    if(params.query && params.key && success && error)
@@ -136,5 +131,5 @@ var get = function(params, success, error){
 };
 
 module.exports = {
-    auto, atlas_auto, atlas_nearby, geocode, place_detail,route, nearby_search, distance, rev_geocode, greet
+    auto, atlas_auto, atlas_nearby, geocode, place_detail,route, nearby_search, distance, rev_geocode
 }

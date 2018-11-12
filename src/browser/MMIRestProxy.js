@@ -2,13 +2,6 @@ const API_URL = 'https://apis.mapmyindia.com/advancedmaps/v1';
 const ATLAS_URL = "https://atlas.mapmyindia.com/api/places";
 const err_msg = [{"status": 400, "message": "something went wrong"}];
 var access_token = null;
-function greet(success, error, opts) {
-  if(opts[0]){
-    success("Hi, "+opts[0]);
-  } else {
-    error('Empty message!');
-  }
-}
 
 function atlas_auto(success, error, opts){
     var url = ATLAS_URL+'/search/json?query='+opts[2];
@@ -157,7 +150,7 @@ function after() {
 }
 
 module.exports = {
-  greet, autos,revGeocode, geocode, placeDetail, getDistance, getNearByPlaces, Routing, get, atlas_auto, atlas_nearby
+  autos,revGeocode, geocode, placeDetail, getDistance, getNearByPlaces, Routing, get, atlas_auto, atlas_nearby
 };
 
 require('cordova/exec/proxy').add('MMIRest', module.exports);
