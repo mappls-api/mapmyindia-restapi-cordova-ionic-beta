@@ -22,6 +22,7 @@ import java.net.URLEncoder;
 public class Setter extends CordovaPlugin {
 
  private final static String BASE_REQ_URL = "https://apis.mapmyindia.com/advancedmaps/v1";
+ private final static String ATLAS_REQ_URL = "https://atlas.mapmyindia.com/api/places";
  private final String token_url = "https://outpost.mapmyindia.com/api/security/oauth/token";
  private String oauth2_token_type = null;
  private String oauth2_access_token = null;
@@ -63,6 +64,7 @@ public class Setter extends CordovaPlugin {
        String clientSecret = args.getString(1);
        String keywords = args.getString(2);
        String refLocation = args.getString(3);
+
        this.atlasNearBy(callbackContext, clientId, clientSecret, keywords, refLocation);
        return true;
     }

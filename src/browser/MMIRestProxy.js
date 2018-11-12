@@ -22,6 +22,14 @@ function autos(success, error, opts) {
     });
 }
 
+function get(success, error, opts){
+  load(opts[0],function (data) {
+      success(data);
+  }, function (err) {
+      error(err);
+  });
+}
+
 function revGeocode(success, error, opts) {
     var url = API_URL+'/'+opts[0]+'/rev_geocode?lat='+opts[1]+"&lng="+opts[2];
     load(url,function (data) {
@@ -128,7 +136,7 @@ function after() {
 }
 
 module.exports = {
-  autos,revGeocode, geocode, placeDetail, getDistance, getNearByPlaces, Routing, get, atlas_auto, atlas_nearby
+  autos,revGeocode, geocode, placeDetail, getDistance, getNearByPlaces, Routing, get, atlas_auto, atlas_nearby, get
 };
 
 require('cordova/exec/proxy').add('MMIRest', module.exports);
