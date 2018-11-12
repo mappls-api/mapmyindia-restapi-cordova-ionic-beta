@@ -61,9 +61,11 @@ public class MMIRest extends CordovaPlugin {
          String encodedUrl = url + urlParams;
          this.atlasRequest(callbackContext, clientId, clientSecret, encodedUrl);
        }catch (Exception e) {
-        callbackContext.error("Something Went wrong");
+         JSONObject error_res = new JSONObject();
+         error_res.put("status", 400);
+         error_res.put("message", "something went wrong");
+         callbackContext.error(error_res);
        }
-       //this.atlasRequest(callbackContext, clientId, clientSecret, encodedUrl);
        return true;
     }
 
@@ -72,10 +74,17 @@ public class MMIRest extends CordovaPlugin {
        String clientSecret = args.getString(1);
        String keywords = args.getString(2);
        String refLocation = args.getString(3);
-       String url = ATLAS_REQ_URL + "/nearby/json?";
-       String urlParams = "keywords=" + keywords + "&refLocation=" + refLocation;
-       String encodedUrl = url + urlParams;
-       this.atlasRequest(callbackContext, clientId, clientSecret, encodedUrl);
+       try{
+         String url = ATLAS_REQ_URL + "/nearby/json?";
+         String urlParams = "keywords=" + keywords + "&refLocation=" + refLocation;
+         String encodedUrl = url + urlParams;
+         this.atlasRequest(callbackContext, clientId, clientSecret, encodedUrl);
+       }catch (Exception e) {
+         JSONObject error_res = new JSONObject();
+         error_res.put("status", 400);
+         error_res.put("message", "something went wrong");
+         callbackContext.error(error_res);
+       }
        return true;
     }
 
