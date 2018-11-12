@@ -39,9 +39,10 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 
 ### Running in the browser
-```js
-  cordova run browser
-```
+| IONIC | CORDOVA |
+| ---- | ---- |
+| ionic cordova run browser | cordova run browser |
+
 
 > MapmyIndia Plugin requires Cordova to	run.
 
