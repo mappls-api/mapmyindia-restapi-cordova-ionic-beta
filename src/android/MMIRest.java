@@ -55,10 +55,15 @@ public class MMIRest extends CordovaPlugin {
        String clientId = args.getString(0);
        String clientSecret = args.getString(1);
        String query = args.getString(2);
-       String url = ATLAS_REQ_URL +"/search/json?";
-       String urlParams = "query=" + URLEncoder.encode(query, "UTF-8");
-       String encodedUrl = url + urlParams;
-       this.atlasRequest(callbackContext, clientId, clientSecret, encodedUrl);
+       try {
+         String url = ATLAS_REQ_URL +"/search/json?";
+         String urlParams = "query=" + URLEncoder.encode(query, "UTF-8");
+         String encodedUrl = url + urlParams;
+         this.atlasRequest(callbackContext, clientId, clientSecret, encodedUrl);
+       }catch (Exception e) {
+        callbackContext.error("Something Went wrong");
+       }
+       //this.atlasRequest(callbackContext, clientId, clientSecret, encodedUrl);
        return true;
     }
 
