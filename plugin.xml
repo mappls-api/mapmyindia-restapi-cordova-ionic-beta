@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="mapmyindia-restapi-cordova-ionic-beta"
-        version="0.0.1">
+        version="0.0.8">
   <name>mapmyindia-restapi-cordova-ionic-beta</name>
   <description>MapmyIndia REST APIs plugin for Cordova/Ionic</description>
   <author>Anuj Singh</author>
   <license>BSD-3-Clause</license>
   <keywords>Cordova, REST APIs, MapmyIndia, Maps</keywords>
-  <repo>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta</repo>
-  <issue>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta/issues</issue>
+  <!-- <repo>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta</repo> -->
+  <repo>https://github.com/anujsinghwd/mapmyindia-restapi-cordova-ionic-beta</repo>
+  <!-- <issue>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta/issues</issue> -->
+  <issue>https://github.com/anujsinghwd/mapmyindia-restapi-cordova-ionic-beta/issues</issue>
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>

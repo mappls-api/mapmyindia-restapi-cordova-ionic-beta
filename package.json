@@ -1,9 +1,9 @@
 {
   "name": "mapmyindia-restapi-cordova-ionic-beta",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "MapmyIndia REST APIs plugin for Cordova/Ionic",
-  "repo": "https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta.git",
-  "issue": "https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta/issues",
+  "repo": "https://github.com/anujsinghwd/mapmyindia-restapi-cordova-ionic-beta.git",
+  "issue": "https://github.com/anujsinghwd/mapmyindia-restapi-cordova-ionic-beta/issues",
   "cordova": {
     "id": "mapmyindia-restapi-cordova-ionic-beta",
     "platforms": [
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta.git"
+    "url": "git+https://github.com/anujsinghwd/mapmyindia-restapi-cordova-ionic-beta.git"
   },
   "keywords": [
     "MapmyIndia Maps",
@@ -34,9 +34,9 @@
   "license": "BSD-3-Clause",
   "dependencies": {},
   "bugs": {
-    "url": "https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta/issues"
+    "url": "https://github.com/anujsinghwd/mapmyindia-restapi-cordova-ionic-beta/issues"
   },
-  "homepage": "https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta#readme",
+  "homepage": "https://github.com/anujsinghwd/mapmyindia-restapi-cordova-ionic-beta#readme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
