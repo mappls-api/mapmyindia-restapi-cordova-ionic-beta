@@ -34,7 +34,9 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 ### Browser Installation
 ```js
-  cordova platform add browser
+  | IONIC | CORDOVA |
+  | ---- | ---- |
+  | ionic cordova platform add browser | cordova platform add browser |
 ```
 
 ### Running in the browser
