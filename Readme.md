@@ -43,6 +43,9 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 | ---- | ---- |
 | ionic cordova run browser | cordova run browser |
 
+#### Only if you are running on cordova project not for ionicframework
+- replace your `<meta>` tag in `index.html`
+  - '<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />'
 
 > MapmyIndia Plugin requires Cordova to	run.
 
