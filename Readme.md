@@ -57,7 +57,6 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 > MapmyIndia Plugin requires Cordova to	run.
 
-
 - Declare mmi_rest var globally
 ```js
   $ declare var mmi_rest;
