@@ -1,24 +1,52 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="mapmyindia-restapi-cordova-ionic-beta"
-        version="0.0.7" xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-<name>mapmyindia-restapi-cordova-ionic-beta</name>
-<description>MapmyIndia REST APIs plugin for Cordova/Ionic</description>
-<author>Anuj Singh</author>
-<license>BSD-3-Clause</license>
-<keywords>Cordova, REST APIs, MapmyIndia, Maps</keywords>
-<repo>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta</repo>
-<issue>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta/issues</issue>
-<js-module name="Setter" src="www/Setter.js">
-  <clobbers target="cordova.plugins.Setter" />
-</js-module>
-<platform name="android">
-  <config-file parent="/*" target="res/xml/config.xml">
-  <feature name="Setter">
-    <param name="android-package" value="com.mapmyindia.cordova.restapi.Setter" />
-  </feature>
-  </config-file>
-  <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-  <source-file src="src/android/Setter.java" target-dir="src/com/mapmyindia/cordova/restapi" />
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="mapmyindia-restapi-cordova-ionic-beta"
+        version="0.0.8">
+  <name>mapmyindia-restapi-cordova-ionic-beta</name>
+  <description>MapmyIndia REST APIs plugin for Cordova/Ionic</description>
+  <author>Anuj Singh</author>
+  <license>BSD-3-Clause</license>
+  <keywords>Cordova, REST APIs, MapmyIndia, Maps</keywords>
+  <repo>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta</repo>
+  <issue>https://github.com/MapmyIndia/mapmyindia-restapi-cordova-ionic-beta/issues</issue>
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  <asset src="www/mmi_rest.js" target="js/mmi_rest.js"/>
+
+  <js-module src="www/mmi_rest.js" name="MMIRest">
+    <clobbers target="mmi_rest" />
+  </js-module>
+
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="MMIRest">
+        <param name="android-package" value="com.mapmyindia.cordova.restapi.MMIRest" />
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+    <source-file src="src/android/MMIRest.java" target-dir="src/com/mapmyindia/cordova/restapi" />
 </platform>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="MMIRest">
+        <param name="ios-package" value="HWPMMIRest" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/HWPMMIRest.h" target-dir="MIRestPlugin" />
+    <source-file src="src/ios/HWPMMIRest.m" target-dir="MIRestPlugin" />
+  </platform>
+
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+        <feature name="MMIRest">
+            <param name="browser-package" value="MMIRestProxy" />
+        </feature>
+    </config-file>
+    <js-module src="src/browser/MMIRestProxy.js" name="MMIRestProxy">
+        <runs />
+    </js-module>
+</platform>
+
 </plugin>

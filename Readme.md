@@ -10,13 +10,20 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.7 | October 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
+| 0.0.8 | November 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
 
 ## Technologies	Used
 
  1. [Java](https://www.java.com/en/download/)
  2. [Javascript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
  3. [Cordova](https://cordova.apache.org/)
+ 4. [ObjectiveC](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011210-CH1-SW1)
+
+ ## Supported	Platform
+
+  1. [Andoroid](https://www.android.com/)
+  2. [Ios](https://www.apple.com/in/ios/)
+  3. [Browser](https://www.google.com/chrome/)
 
 ## Supported Technologies
 
@@ -26,32 +33,37 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 ## Installation
 
-> MapmyIndia Plugin requires Cordova to	run.
-> This plugin will work with only **Android** Devices
-
-- From Github
+### git
 ```js
   $ cordova plugin add https://github.com/mapmyindia/mapmyindia-restapi-cordova-ionic-beta.git
 ```
-- Declare window var globally
+
+### Browser Installation
+  | IONIC | CORDOVA |
+  | ---- | ---- |
+  | ionic cordova platform add browser | cordova platform add browser |
+
+
+### Running in the browser
+| IONIC | CORDOVA |
+| ---- | ---- |
+| ionic cordova run browser | cordova run browser |
+
+#### Only if you are running cordova project in browser not for ionicframework
+- replace your `<meta>` tag in `index.html`
 ```js
-  $ declare var window;
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
 ```
-> Inside `window.plugins.mmi_rest` function if you want	to access `this` property	you have to assign to a	variable like
-> `var	thisObj	= this` outside	the `window.plugins.mmi_rest` function	body if you are	working	with `IONIC V > 1`
 
-### Check if it’s Installed or not
+> MapmyIndia Plugin requires Cordova to	run.
 
-```javascript
-if(window.plugins)
-{
-    console.log('working YAY!');
-}
-else
-{
-    console.log('Not Working!');
-}
+- Declare mmi_rest var globally
+```js
+  $ declare var mmi_rest;
 ```
+> Inside `mmi_rest` function if you want	to access this property	you have to assign to a	variable like
+> `var	thisObj	= this` outside	the `mmi_rest` function	body if you are	working	with `IONIC V > 1`
+
 ## API	Usage
 
 
@@ -79,7 +91,7 @@ else
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.atlas_auto(
+mmi_rest.atlas_auto(
     	{
     	  client_id: 'clientId',
     	  client_secret: 'clientSecret',
@@ -89,7 +101,7 @@ window.plugins.mmi_rest.atlas_auto(
 ##### Example
 
 ```js
-window.plugins.mmi_rest.atlas_auto({client_id: 'clientId', client_secret: 'clientSecret',query: 'agr'},
+mmi_rest.atlas_auto({client_id: 'clientId', client_secret: 'clientSecret',query: 'agr'},
     function(result)
     {
     	console.log(result);
@@ -112,12 +124,12 @@ window.plugins.mmi_rest.atlas_auto({client_id: 'clientId', client_secret: 'clien
 ##### Syntax
 
 ```js
-	window.plugins.mmi_rest.geocode(key: 'YOUR API KEY', addr: 'address'}, Success Callback, Error Callback);
+	mmi_rest.geocode(key: 'YOUR API KEY', addr: 'address'}, Success Callback, Error Callback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.geocode({key: 'YOUR API KEY', addr: 'lucknow'},
+mmi_rest.geocode({key: 'YOUR API KEY', addr: 'lucknow'},
   function(result){
       console.log(JSON.stringify(result));
   },
@@ -141,12 +153,12 @@ window.plugins.mmi_rest.geocode({key: 'YOUR API KEY', addr: 'lucknow'},
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId', client_secret: 'clientSecret', keywords: 'beer', refLocation: '28.631460,77.217423'}, SuccessCallback, ErrorCallback);
+mmi_rest.atlas_nearby({client_id: 'clientId', client_secret: 'clientSecret', keywords: 'beer', refLocation: '28.631460,77.217423'}, SuccessCallback, ErrorCallback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId',client_secret: 'clientSecret',keywords: 'beer',refLocation: '28.631460,77.217423'},
+mmi_rest.atlas_nearby({client_id: 'clientId',client_secret: 'clientSecret',keywords: 'beer',refLocation: '28.631460,77.217423'},
   function(result)
   {
   	console.log(JSON.stringify(result));
@@ -170,12 +182,12 @@ window.plugins.mmi_rest.atlas_nearby({client_id: 'clientId',client_secret: 'clie
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.rev_geocode(key: 'YOUR API KEY', lat: '27.61234', lng:	'77.61234'}, Success Callback, Error Callback);
+mmi_rest.rev_geocode(key: 'YOUR API KEY', lat: '27.61234', lng:	'77.61234'}, Success Callback, Error Callback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.rev_geocode({key: 'YOUR	API KEY', lat: '27.61234', lng: '77.61234'},
+mmi_rest.rev_geocode({key: 'YOUR	API KEY', lat: '27.61234', lng: '77.61234'},
 function(result){
     console.log(JSON.stringify(result));
 },
@@ -195,11 +207,11 @@ function(err){
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.place_detail({key: 'YOUR API KEY', placeId: 'MMI000'}, Success Callback, Error Callback);
+mmi_rest.place_detail({key: 'YOUR API KEY', placeId: 'MMI000'}, Success Callback, Error Callback);
 ```
 ##### Example
 ```js
-window.plugins.mmi_rest.place_detail({key: 'YOUR API KEY', placeId: 'MMI000'},
+mmi_rest.place_detail({key: 'YOUR API KEY', placeId: 'MMI000'},
 function(result)
 {
     console.log(JSON.stringify(result));
@@ -224,12 +236,12 @@ function(err)
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77.61234', points:'29,78|30,78|28,79'}, Success Callback, ErrorCallback);
+mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77.61234', points:'29,78|30,78|28,79'}, Success Callback, ErrorCallback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77.61234', points: '29,78|30,78|28,79'},
+mmi_rest.distance({key: 'YOUR API KEY', lat: '27.61234', lng: '77.61234', points: '29,78|30,78|28,79'},
 function(result)
 {
     console.log(JSON.stringify(result));
@@ -254,12 +266,12 @@ Note: "alternatives" and "advices" are optional	parameters; send `null` if they 
 ##### Syntax
 
 ```js
-window.plugins.mmi_rest.route({key: 'YOUR API KEY', start: '28.111,77.111', destination: '28.22,77.22', alternatives: null,	advices: null},	SuccessCallback, ErrorCallback);
+mmi_rest.route({key: 'YOUR API KEY', start: '28.111,77.111', destination: '28.22,77.22', alternatives: null,	advices: null},	SuccessCallback, ErrorCallback);
 ```
 ##### Example
 
 ```js
-window.plugins.mmi_rest.route({key: 'YOUR API KEY', start: '28.111,77.111', destination: '28.22,77.22',	alternatives: null,	advices: null},
+mmi_rest.route({key: 'YOUR API KEY', start: '28.111,77.111', destination: '28.22,77.22',	alternatives: null,	advices: null},
 function(result)
 {
     console.log(JSON.stringify(result));
@@ -274,7 +286,7 @@ function(err)
 #### How to generate an HTTP GET Request
 
 ```js
-window.plugins.mmi_rest.get(url, Success Callback, Error Callback);
+mmi_rest.get(url, Success Callback, Error Callback);
 ```
 
 For any queries and support, please contact:

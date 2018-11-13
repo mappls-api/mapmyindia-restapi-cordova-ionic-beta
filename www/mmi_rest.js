@@ -1,21 +1,18 @@
-var PLUGIN_NAME = "Setter";
-// Act as constructor
-function MMI_Rest() {}
-
-MMI_Rest.prototype.auto = function(params, success, error)
+var PLUGIN_NAME = "MMIRest";
+var auto = function(params, success, error)
 {
    if(params.query && params.key && success && error)
    {
-      cordova.exec(success, error, PLUGIN_NAME, 'auto', [params.key, params.query.toString()]);
+      cordova.exec(success, error, PLUGIN_NAME, 'autos', [params.key, params.query.toString()]);
    }
    else
    {
       console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
       cordova.exec(success, error, PLUGIN_NAME, 'error', null);
    }
-}
+};
 
-MMI_Rest.prototype.atlas_auto = function(params ,success, error)
+var atlas_auto = function(params ,success, error)
 {
   if(params.query && params.client_id && params.client_secret && success && error)
   {
@@ -26,22 +23,22 @@ MMI_Rest.prototype.atlas_auto = function(params ,success, error)
     console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
     cordova.exec(success, error, PLUGIN_NAME, 'error', null);
   }
-}
+};
 
-MMI_Rest.prototype.atlas_nearby = function(params ,success, error)
+var atlas_nearby = function(params ,success, error)
 {
   if(params.keywords && params.refLocation && params.client_id && params.client_secret && success && error)
   {
-    cordova.exec(success, error, PLUGIN_NAME, 'atlas_nearby', [params.client_id , params.client_secret ,params.keywords.toString(), params.refLocation.toString()]);
+    cordova.exec(success, error, PLUGIN_NAME, 'atlas_nearby', [params.client_id , params.client_secret ,params.keywords.toString(), params.refLocation]);
   }
   else
   {
     console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
     cordova.exec(success, error, PLUGIN_NAME, 'error', []);
   }
-}
+};
 
-MMI_Rest.prototype.geocode = function(params ,success, error)
+var geocode = function(params ,success, error)
 {
   if(params.key && params.addr && success && error)
   {
@@ -52,9 +49,9 @@ MMI_Rest.prototype.geocode = function(params ,success, error)
     console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
     cordova.exec(success, error, PLUGIN_NAME, 'error', []);
   }
-}
+};
 
-MMI_Rest.prototype.rev_geocode = function(params ,success, error)
+var rev_geocode = function(params ,success, error)
 {
   if(params.key && params.lat && params.lng && success && error)
   {
@@ -65,9 +62,9 @@ MMI_Rest.prototype.rev_geocode = function(params ,success, error)
     console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
     cordova.exec(success, error, PLUGIN_NAME, 'error', []);
   }
-}
+};
 
-MMI_Rest.prototype.place_detail = function(params ,success, error)
+var place_detail = function(params ,success, error)
 {
    if(params.key && params.placeId && success && error)
    {
@@ -78,9 +75,9 @@ MMI_Rest.prototype.place_detail = function(params ,success, error)
      console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
      cordova.exec(success, error, PLUGIN_NAME, 'error', []);
    }
-}
+};
 
-MMI_Rest.prototype.distance = function(params ,success, error)
+var distance = function(params ,success, error)
 {
    if(params.key && params.lat && params.lng && params.points && success && error)
    {
@@ -91,9 +88,9 @@ MMI_Rest.prototype.distance = function(params ,success, error)
      console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
      cordova.exec(success, error, PLUGIN_NAME, 'error', []);
    }
-}
+};
 
-MMI_Rest.prototype.nearby_search = function(params, success, error)
+var nearby_search = function(params, success, error)
 {
    if(params.key && params.lat && params.lng && params.keyword && success && error)
    {
@@ -104,23 +101,24 @@ MMI_Rest.prototype.nearby_search = function(params, success, error)
      console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
      cordova.exec(success, error, PLUGIN_NAME, 'error', []);
    }
-}
+};
 
-MMI_Rest.prototype.route = function(params ,success, error){
+var route = function(params ,success, error){
    if(params.key && params.start && params.destination && success && error)
    {
-      var alternatives = (params.alternatives) ? params.alternatives.toString() : null;
-      var advices = (params.advices) ? params.advices.toString() : null;
-      cordova.exec(success, error, PLUGIN_NAME, 'Routing', [params.key, params.start.toString(), params.destination.toString(), alternatives, advices]);
+      params.alternatives = (params.alternatives) ? params.alternatives.toString() : 'true';
+      params.advices = (params.advices) ? params.advices.toString() : '0';
+      cordova.exec(success, error, PLUGIN_NAME, 'Routing', [params.key, params.start.toString(), params.destination.toString(), params.alternatives, params.advices]);
    }
    else
    {
       console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
       cordova.exec(success, error, PLUGIN_NAME, 'error', []);
    }
-}
+};
 
-MMI_Rest.prototype.get = function(params, success, error){
+
+var get = function(params, success, error){
     if(params.url && success && error)
     {
         cordova.exec(success, error, PLUGIN_NAME, 'get', [params.url]);
@@ -130,15 +128,8 @@ MMI_Rest.prototype.get = function(params, success, error){
         console.log("\x1b[31mError generated from MMI_REST_API_CRODOVA_PLUGIN: Paramater Missing, please put all the parameters\x1b[0m");
         cordova.exec(success, error, PLUGIN_NAME, 'error', []);
     }
-}
-// Installation constructor that binds MMI_Rest to window
-MMI_Rest.install = function() {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
-  window.plugins.mmi_rest = new MMI_Rest();
-  return window.plugins.mmi_rest;
 };
 
-// Bind all plugin to window object
-cordova.addConstructor(MMI_Rest.install);
+module.exports = {
+    auto, atlas_auto, atlas_nearby, geocode, place_detail,route, nearby_search, distance, rev_geocode
+}
