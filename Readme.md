@@ -10,7 +10,7 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.8 | November 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
+| 0.0.9 | November 2018 | MapmyIndia API Team ([AS](https://github.com/anujsinghwd)) |
 
 ## Technologies	Used
 
@@ -32,6 +32,11 @@ You can get your api key to be used in this document here: [https://www.mapmyind
  3. [Phonegap](https://phonegap.com/)
 
 ## Installation
+
+### npm
+```js
+  $ cordova plugin add mapmyindia-restapi-cordova-ionic-beta
+```
 
 ### git
 ```js
