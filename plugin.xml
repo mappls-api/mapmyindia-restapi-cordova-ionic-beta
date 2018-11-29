@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="mapmyindia-restapi-cordova-ionic-beta"
-        version="0.0.6">
+        version="0.0.9">
   <name>mapmyindia-restapi-cordova-ionic-beta</name>
   <description>MapmyIndia REST APIs plugin for Cordova/Ionic</description>
   <author>Anuj Singh</author>
