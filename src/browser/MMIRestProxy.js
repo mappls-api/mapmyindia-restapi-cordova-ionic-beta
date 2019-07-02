@@ -4,17 +4,17 @@ const err_msg = [{"status": 400, "message": "something went wrong"}];
 var access_token = null;
 
 function atlas_auto(success, error, opts){
-    var url = ATLAS_URL+'/search/json?query='+opts[2];
+    let url = ATLAS_URL+'/search/json?query='+opts[2];
     get_token(opts[0], opts[1], success, error, url);
 }
 
 function atlas_nearby(success, error, opts){
-    var url = ATLAS_URL+'/nearby/json?keywords='+opts[2]+'&refLocation='+opts[3];
+    let url = ATLAS_URL+'/nearby/json?keywords='+opts[2]+'&refLocation='+opts[3];
     get_token(opts[0], opts[1], success, error, url);
 }
 
 function autos(success, error, opts) {
-    var url = API_URL+'/'+opts[0]+'/autosuggest?q='+opts[1];
+    let url = API_URL+'/'+opts[0]+'/autosuggest?q='+opts[1];
     load(url,function (data) {
         success(data);
     }, function (err) {
@@ -23,7 +23,7 @@ function autos(success, error, opts) {
 }
 
 function revGeocode(success, error, opts) {
-    var url = API_URL+'/'+opts[0]+'/rev_geocode?lat='+opts[1]+"&lng="+opts[2];
+    let url = API_URL+'/'+opts[0]+'/rev_geocode?lat='+opts[1]+"&lng="+opts[2];
     load(url,function (data) {
         success(data);
     }, function (err) {
@@ -32,7 +32,7 @@ function revGeocode(success, error, opts) {
 }
 
 function geocode(success, error, opts) {
-    var url = API_URL+'/'+opts[0]+'/geo_code?addr='+opts[1];
+    let url = API_URL+'/'+opts[0]+'/geo_code?addr='+opts[1];
     load(url,function (data) {
         success(data);
     }, function (err) {
@@ -41,7 +41,7 @@ function geocode(success, error, opts) {
 }
 
 function placeDetail(success, error, opts) {
-    var url = API_URL+'/'+opts[0]+'/place_detail?place_id='+opts[1];
+    let url = API_URL+'/'+opts[0]+'/place_detail?place_id='+opts[1];
     load(url,function (data) {
         success(data);
     }, function (err) {
@@ -50,7 +50,7 @@ function placeDetail(success, error, opts) {
 }
 
 function getDistance(success, error, opts) {
-    var url = API_URL+'/'+opts[0]+'/distance?center='+opts[1]+ "," + opts[2] +"&pts="+opts[3];
+    let url = API_URL+'/'+opts[0]+'/distance?center='+opts[1]+ "," + opts[2] +"&pts="+opts[3];
     load(url,function (data) {
         success(data);
     }, function (err) {
@@ -59,7 +59,7 @@ function getDistance(success, error, opts) {
 }
 
 function getNearByPlaces(success, error, opts) {
-    var url = API_URL+'/'+opts[0]+'/nearby_search?lat='+opts[1]+"&lng="+ opts[2] +"&keywords="+opts[3];
+    let url = API_URL+'/'+opts[0]+'/nearby_search?lat='+opts[1]+"&lng="+ opts[2] +"&keywords="+opts[3];
     load(url,function (data) {
         success(data);
     }, function (err) {
@@ -68,7 +68,7 @@ function getNearByPlaces(success, error, opts) {
 }
 
 function Routing(success, error, opts) {
-    var url = API_URL+'/'+opts[0]+'/route?start='+opts[1]+"&destination="+ opts[2] +"&alternatives="+opts[3]+"&with_advices="+opts[4];
+    let url = API_URL+'/'+opts[0]+'/route?start='+opts[1]+"&destination="+ opts[2] +"&alternatives="+opts[3]+"&with_advices="+opts[4];
     load(url,function (data) {
         success(data);
     }, function (err) {
