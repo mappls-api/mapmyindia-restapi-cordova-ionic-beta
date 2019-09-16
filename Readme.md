@@ -22,12 +22,8 @@ You can get your api key to be used in this document here: [https://www.mapmyind
   
 
 ## Version History
-
-| Version | Last Updated | Author |
-
-| ---- | ---- | ---- |
-
-| 1.0.1 | November 2018 | MapmyIndia API Team ([BM](https://github.com/balmukandpathak)) |
+|Version   | Last Updated  |Author 
+|1.0.1 		 |Sep 2019|MapmyIndia API Team ([BM](https://github.com/balmukandpathak))
 
   
 
