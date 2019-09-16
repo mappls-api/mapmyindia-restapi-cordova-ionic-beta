@@ -1,9 +1,5 @@
-
-  
-
 # MapmyIndia REST APIs for Cordova/Ionic - Beta 1
 
-  
 
 [![N|Solid](https://www.mapmyindia.com/api/img/mapmyindia-api.png)](https://www.mapmyindia.com/api/)
 
@@ -22,7 +18,8 @@ You can get your api key to be used in this document here: [https://www.mapmyind
   
 
 ## Version History
-|Version   | Last Updated  |Author 
+| Version | Last Updated  |Author | 
+| --- | --- | --- |
 |1.0.1 		 |Sep 2019|MapmyIndia API Team ([BM](https://github.com/balmukandpathak))
 
   
@@ -92,9 +89,7 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 ### Browser Installation
 
 | IONIC | CORDOVA |
-
 | ---- | ---- |
-
 | ionic cordova platform add browser | cordova platform add browser |
 
   
@@ -102,9 +97,7 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 ### Running in the browser
 
 | IONIC | CORDOVA |
-
 | ---- | ---- |
-
 | ionic cordova run browser | cordova run browser |
 
   
