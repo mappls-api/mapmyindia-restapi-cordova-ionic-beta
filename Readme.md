@@ -36,12 +36,12 @@ You can get your api key to be used in this document here: [https://www.mapmyind
 
  
 ## Installation
-
+<!--
 ### npm
 ```js
  > cordova  plugin  add  mapmyindia-restapi-cordova-ionic-beta
 ```
-
+-->
 ### git
 
 ```js
