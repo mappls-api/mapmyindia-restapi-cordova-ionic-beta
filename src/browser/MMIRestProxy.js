@@ -7,7 +7,10 @@ function atlas_auto(success, error, opts){
     let url = ATLAS_URL+'/search/json?query='+opts[2];
     get_token(opts[0], opts[1], success, error, url);
 }
-
+function atlas_geocode(success, error, opts){
+    let url = ATLAS_URL+'/geocode?address='+opts[2];
+    get_token(opts[0], opts[1], success, error, url);
+}
 function atlas_nearby(success, error, opts){
     let url = ATLAS_URL+'/nearby/json?keywords='+opts[2]+'&refLocation='+opts[3];
     get_token(opts[0], opts[1], success, error, url);
@@ -136,7 +139,7 @@ function get(success, error, opts){
 }
 
 module.exports = {
-  autos,revGeocode, geocode, placeDetail, getDistance, getNearByPlaces, Routing, get, atlas_auto, atlas_nearby, get
+  autos,revGeocode, geocode, placeDetail, getDistance, getNearByPlaces, Routing, get, atlas_auto,atlas_geocode,atlas_nearby, get
 };
 
 require('cordova/exec/proxy').add('MMIRest', module.exports);
